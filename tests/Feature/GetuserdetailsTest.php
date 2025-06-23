@@ -22,6 +22,11 @@ final class GetuserdetailsTest extends TestCase
 
         //A - Assertion (compare)
         $response->assertStatus(200);
+        $response->assertSimilarJson([
+            'user_name' => 'kavindu',
+            'email' => 'kavindugmail.com',
+            'user_role' => 'admin',
+        ]);
 
     }
 
